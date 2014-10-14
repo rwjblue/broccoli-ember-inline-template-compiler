@@ -1,0 +1,21 @@
+{
+  "name": "broccoli-ember-inline-template-compiler",
+  "version": "0.0.1",
+  "description": "Broccoli plugin to precompile inline Handlebars templates",
+  "main": "index.js",
+  "author": "Robert Jackson",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rjackson/broccoli-ember-inline-template-compiler.git"
+  },
+  "keywords": [
+    "broccoli-plugin",
+    "javascript"
+  ],
+  "dependencies": {
+    "broccoli": "0.13.0",
+    "broccoli-filter": "0.1.7",
+    "ember-template-compiler": "1.7.0-beta.1"
+  }
+}
