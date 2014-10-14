@@ -25,7 +25,7 @@ Example:
   var template = precompileTemplate("...");
 ```
 
-### Installation
+### Installation (as Broccoli plugin)
 
 `npm install --save-dev broccoli-ember-inline-template-compiler`
 
@@ -36,6 +36,12 @@ var inlineTemplateCompiler = require('broccoli-ember-inline-template-compiler');
 
 tree = inlineTemplateCompiler(tree);
 ```
+
+### Installation (as ember-cli addon)
+
+`npm install --save-dev broccoli-ember-inline-template-compiler`
+
+No changes to your `Brocfile.js`
 
 ### Credits
 
