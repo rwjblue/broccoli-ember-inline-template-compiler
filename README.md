@@ -16,7 +16,7 @@ In order for Broccoli Ember Inline Template Compiler to pickup inline templates,
 
 Example:
 
-```
+```javascript
   // instead of
   var template = Ember.Handlebars.compile("...");
 
@@ -31,7 +31,7 @@ Example:
 
 And then in your `Brocfile.js`:
 
-```
+```javascript
 var inlineTemplateCompiler = require('broccoli-ember-inline-template-compiler');
 
 tree = inlineTemplateCompiler(tree);
