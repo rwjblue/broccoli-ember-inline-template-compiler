@@ -10,7 +10,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/rjackson/broccoli-ember-inline-template-compiler.git"
+    "url": "https://github.com/rwjblue/broccoli-ember-inline-template-compiler.git"
   },
   "keywords": [
     "ember-addon",
