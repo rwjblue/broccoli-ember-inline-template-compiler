@@ -2,7 +2,7 @@
 var fs = require('fs');
 var path = require('path');
 var Filter = require('broccoli-filter');
-var compiler = require('ember-template-compiler');
+var compiler = require('../../bower_components/ember/ember-template-compiler.js');
 
 module.exports = EmberInlineTemplatePrecompiler;
 EmberInlineTemplatePrecompiler.prototype = Object.create(Filter.prototype);
