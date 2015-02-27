@@ -43,6 +43,8 @@ tree = inlineTemplateCompiler(tree);
 
 No changes to your `Brocfile.js`
 
+When used in an ember-cli project, this addon will use the current version of ember-template-compiler from your ember dependency
+
 ### Credits
 
 Extracted from https://github.com/emberjs/ember.js/blob/master/lib/broccoli-ember-inline-template-precompiler.js. Authored by [@rwjblue](https://github.com/rwjblue), [@fivetanley](https://github.com/fivetanley), and [@concreted](https://github.com/concreted).
