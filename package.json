@@ -4,7 +4,8 @@
   "description": "Broccoli plugin to precompile inline Handlebars templates",
   "main": "index.js",
   "ember-addon": {
-    "main": "addon.js"
+    "main": "addon.js",
+    "before": ["ember-cli-6to5"]
   },
   "author": "Robert Jackson",
   "license": "MIT",
