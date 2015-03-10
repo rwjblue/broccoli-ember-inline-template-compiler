@@ -2,6 +2,11 @@
 
 Broccoli plugin that precompiles inline Handlebars templates so that libraries or applications can be packaged with Handlebars Runtime only instead of the full library.
 
+### Handlebars 2.0 Support
+
+Handlebars 2.0 support has been removed. If you are using broccoli-ember-inline-template-compiler with a 1.9.x project please continue
+to use broccoli-ember-inline-template-compiler@0.0.x.
+
 ## Documentation
 
 ### `inlineTemplateCompiler(inputTree)`
@@ -32,9 +37,10 @@ Example:
 And then in your `Brocfile.js`:
 
 ```javascript
-var inlineTemplateCompiler = require('broccoli-ember-inline-template-compiler');
+var InlineTemplateCompiler = require('broccoli-ember-inline-template-compiler');
+var emberTemplateCompiler = require('./bower_components/ember/ember-template-compiler');
 
-tree = inlineTemplateCompiler(tree);
+tree = new InlineTemplateCompiler(tree, { compiler: emberTemplateCompiler });
 ```
 
 ### Installation (as ember-cli addon)
