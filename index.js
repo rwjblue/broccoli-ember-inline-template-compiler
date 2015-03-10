@@ -1,16 +1,15 @@
 /*jshint node: true */
 var fs = require('fs');
-var path = require('path');
 var Filter = require('broccoli-filter');
-var compiler = require('ember-template-compiler');
 
 module.exports = EmberInlineTemplatePrecompiler;
 EmberInlineTemplatePrecompiler.prototype = Object.create(Filter.prototype);
 EmberInlineTemplatePrecompiler.prototype.constructor = EmberInlineTemplatePrecompiler;
-function EmberInlineTemplatePrecompiler (inputTree) {
-  if (!(this instanceof EmberInlineTemplatePrecompiler)) return new EmberInlineTemplatePrecompiler(inputTree);
+function EmberInlineTemplatePrecompiler (inputTree, options) {
+  if (!(this instanceof EmberInlineTemplatePrecompiler)) return new EmberInlineTemplatePrecompiler(inputTree, options);
 
   this.inputTree = inputTree;
+  this.compiler = options && options.compiler || require('ember-template-compiler');
   this.inlineTemplateRegExp = /precompileTemplate\(['"](.*)['"]\)/;
   // Used for replacing the original variable declaration to satisfy JSHint.
   // For example, removes `var precompileTemplate = Ember.Handlebars.compile;`.
@@ -35,7 +34,7 @@ EmberInlineTemplatePrecompiler.prototype.processFile = function (srcDir, destDir
 
     while (nextIndex > -1) {
       var match = inputString.match(self.inlineTemplateRegExp);
-      var template = "Ember.Handlebars.template(" + compiler.precompile(match[1], false) + ")";
+      var template = "Ember.Handlebars.template(" + self.compiler.precompile(match[1], false) + ")";
 
       inputString = inputString.replace(match[0], template);
 
