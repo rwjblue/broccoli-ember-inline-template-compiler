@@ -32,9 +32,10 @@ Example:
 And then in your `Brocfile.js`:
 
 ```javascript
-var inlineTemplateCompiler = require('broccoli-ember-inline-template-compiler');
+var InlineTemplateCompiler = require('broccoli-ember-inline-template-compiler');
+var emberTemplateCompiler = require('./bower_components/ember/ember-template-compiler');
 
-tree = inlineTemplateCompiler(tree);
+tree = new InlineTemplateCompiler(tree, { compiler: emberTemplateCompiler });
 ```
 
 ### Installation (as ember-cli addon)

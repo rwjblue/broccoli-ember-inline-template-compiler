@@ -19,8 +19,7 @@
   ],
   "dependencies": {
     "broccoli-filter": "0.1.11",
-    "ember-cli-version-checker": "^1.0.2",
-    "ember-template-compiler": "1.9.0-alpha"
+    "ember-cli-version-checker": "^1.0.2"
   },
   "devDependencies": {
     "broccoli": "^0.15.0"
