@@ -21,8 +21,14 @@ Example:
   var template = Ember.Handlebars.compile("...");
 
   // do
-  var precompileTemplate = Ember.Handlebars.compile;
+  var precompileTemplate = Ember.HTMLBars.compile;
   var template = precompileTemplate("...");
+```
+
+You can also use the compiler in the Handlebars namespace by changing your `precompileTemplate` definition:
+
+```javascript
+  var precompileTemplate = Ember.Handlebars.compile;
 ```
 
 ### Installation (as Broccoli plugin)
